@@ -1,27 +1,5 @@
 "use client"
 
-// import Link from "next/link";
-// import Image from "next/image";
-
-// const nav = () => {
-//   return (
-//     <div className="font-sans p-20">
-//         <nav className="flex items-center justify-around p-4">
-//             <h1 className="text-2xl font-bold text-white">NeemaBaraka</h1>
-//             <ul className="flex gap-4 text-white">
-//                 <li><Link href="/">Home</Link></li>
-//                 <li><Link href="/about">About</Link></li>
-//                 <li><Link href="/services">Services</Link></li>
-//                 <li><Link href="/contact">Contact</Link></li>
-//             </ul>
-//         </nav>
-
-//     </div>
-//   )
-// }
-
-// export default nav
-
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -57,8 +35,8 @@ const Nav = () => {
         <h1 className="text-2xl font-bold text-white">NeemaBaraka</h1>
         <ul className="flex gap-4 text-white">
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/services">Services</Link></li>
+          <li><Link href="/">About</Link></li>
+          <li><Link href="/">Services</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>
       </nav>
