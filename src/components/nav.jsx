@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import {Menu, X} from "lucide-react";
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,21 +27,68 @@ const Nav = () => {
     };
   }, []);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
+
   return (
     <div
       className={`font-sans p-10 fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
         scrolled ? "bg-sky-900 bg-opacity-90" : "bg-transparent"
       }`}
     >
-      <nav className="flex items-center justify-around">
+      <nav className="flex items-center justify-around p-4 md:p-10">
         <h1 className="text-2xl font-bold text-white">NeemaBaraka</h1>
-        <ul className="flex gap-4 text-white">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/">About</Link></li>
-          <li><Link href="/">Services</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+
+        {/* Mobile menu button */}
+        <button onClick={toggleMobileMenu} className="md:hidden text-white">
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Desktop menu */}
+        <ul className="hidden md:flex gap-4 text-white">
+          <li>
+            <Link href="/#home">Home</Link>
+          </li>
+          <li>
+            <Link href="/#services">Services</Link>
+          </li>
+          <li>
+            <Link href="/#about">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
       </nav>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-sky-900 bg-opacity-90">
+          <ul className="flex flex-col items-center py-4 text-white">
+            <li className="py-2">
+              <Link href="/#home" onClick={toggleMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li className="py-2">
+              <Link href="/#services" onClick={toggleMobileMenu}>
+                Services
+              </Link>
+            </li>
+            <li className="py-2">
+              <Link href="/#about" onClick={toggleMobileMenu}>
+                About
+              </Link>
+            </li>
+            <li className="py-2">
+              <Link href="/contact" onClick={toggleMobileMenu}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

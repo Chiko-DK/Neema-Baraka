@@ -2,6 +2,7 @@
 
 
 import Nav from "@/components/nav";
+import Footer from "@/components/footer";
 import Carousel from "@/components/homeCarousel";
 import { Button } from "@/components/ui/button";
 import { motion } from 'motion/react';
@@ -11,7 +12,7 @@ import Link from "next/link";
 export default function HomePage() {
     return (
         <div className="font-sans">
-            <header className="relative w-full h-screen bg-cover bg-center" >
+            <header id="home" className="relative w-full h-screen bg-cover bg-center" >
 
                 <Nav />
 
@@ -126,10 +127,8 @@ export default function HomePage() {
                 </div>
             </section>
 
+            <Footer />
 
-            <footer className="py-8 bg-secondary text-black">
-                <div className="text-center">&copy; 2025 NeemaBaraka. All rights reserved.</div>
-            </footer>
         </div>
     );
 }

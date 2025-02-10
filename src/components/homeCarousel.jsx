@@ -100,7 +100,7 @@ export default function CarouselDemo() {
                 transition={{ delay: 0.45, duration: 0.8 }}
             >
                 <button className="mt-6 px-6 py-3 bg-primary rounded-full">
-                    {slides[currentIndex].button}
+                <Link href="/contact">{slides[currentIndex].button}</Link>
                 </button>
             </motion.div>
         </div>
