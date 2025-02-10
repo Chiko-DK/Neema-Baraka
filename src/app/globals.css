@@ -10,6 +10,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+li:hover{
+  color: orangered;
+}
+
+button:hover{
+  background-color: orangered;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

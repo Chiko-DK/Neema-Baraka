@@ -16,22 +16,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/#home" className="text-sm hover:text-white hover:underline">
+                <Link href="/#home" className="text-sm hover:text-orangered hover:underline">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="text-sm hover:text-white hover:underline">
+                <Link href="/#services" className="text-sm hover:text-orangered hover:underline">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/#about" className="text-sm hover:text-white hover:underline">
+                <Link href="/#about" className="text-sm hover:text-orangered hover:underline">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm hover:text-white hover:underline">
+                <Link href="/contact" className="text-sm hover:text-orangered hover:underline">
                   Contact
                 </Link>
               </li>
@@ -55,15 +55,15 @@ const Footer = () => {
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <Facebook size={24} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+              {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <Twitter size={24} />
-              </a>
+              </a> */}
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <Instagram size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+              {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <Linkedin size={24} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
