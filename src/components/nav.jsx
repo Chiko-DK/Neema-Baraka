@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {Menu, X} from "lucide-react";
 
 const Nav = () => {
@@ -37,8 +38,14 @@ const Nav = () => {
         scrolled ? "bg-sky-900 bg-opacity-90" : "bg-transparent"
       }`}
     >
-      <nav className="flex items-center justify-around p-4 md:p-10">
-        <h1 className="text-2xl font-bold text-white">NeemaBaraka</h1>
+      <nav className="flex items-center justify-around">
+        <img
+          src="/logo.png"
+          alt="Nehema Baraka"
+          width={250}
+          height={250}
+        />
+        
 
         {/* Mobile menu button */}
         <button onClick={toggleMobileMenu} className="md:hidden text-white">
